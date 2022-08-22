@@ -1,6 +1,6 @@
 {
   "name": "ngx-chips",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Tag Input component for Angular",
   "scripts": {
     "release": "npm run build && npm publish dist",
@@ -13,8 +13,7 @@
     "ng": "ng"
   },
   "author": {
-    "name": "Giancarlo Buomprisco",
-    "email": "giancarlopsk@gmail.com"
+    "name": "Pulit"
   },
   "contributors": [],
   "license": "MIT",
@@ -68,12 +67,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Gbuomprisco/ngx-chips"
+    "url": "https://github.com/Pulit/ngx-chips"
   },
   "bugs": {
-    "url": "https://github.com/Gbuomprisco/ngx-chips/issues"
+    "url": "https://github.com/Pulit/ngx-chips/issues"
   },
-  "homepage": "https://github.com/Gbuomprisco/ngx-chips",
+  "homepage": "https://github.com/Pulit/ngx-chips",
   "$schema": "./node_modules/ng-packagr/package.schema.json",
   "ngPackage": {
     "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
