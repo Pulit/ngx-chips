@@ -596,9 +596,16 @@ export class TagInputComponent extends TagInputAccessor implements OnInit, After
         event.preventDefault();
     }
 
-    public async onFormSubmit() {
+    public async onFormSubmit($event) {
         try {
-            await this.onAddingRequested(false, this.formValue);
+            // the keyCode of keydown event is 229 when IME is processing the key event.
+            // tslint:disable-next-line:max-line-length
+            const isIMEProcessing = $event && ($event.isComposing || $event.key === 'Process' || $event.keyCode === 229);
+            if (isIMEProcessing) {
+              $event.preventDefault();
+            } else {
+              await this.onAddingRequested(false, this.formValue);
+            }
         } catch {
             return;
         }
@@ -995,7 +1002,7 @@ export class TagInputComponent extends TagInputAccessor implements OnInit, After
             const hasKeyCode = this.separatorKeyCodes.indexOf($event.keyCode) >= 0;
             const hasKey = this.separatorKeys.indexOf($event.key) >= 0;
             // the keyCode of keydown event is 229 when IME is processing the key event.
-            const isIMEProcessing = $event.keyCode === 229;
+            const isIMEProcessing = $event.isComposing || $event.key === 'Process' || $event.keyCode === 229;
 
             if (hasKeyCode || (hasKey && !isIMEProcessing)) {
                 $event.preventDefault();
