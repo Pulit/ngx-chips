@@ -1,9 +1,7 @@
 import { ControlValueAccessor } from '@angular/forms';
 import { TagInputDropdown } from '../components/dropdown/tag-input-dropdown.component';
-export declare class TagModelClass {
-    [key: string]: any;
-}
-export declare type TagModel = string | TagModelClass;
+import { TagModel } from './tag-model';
+import * as i0 from "@angular/core";
 export declare function isObject(obj: any): boolean;
 export declare class TagInputAccessor implements ControlValueAccessor {
     private _items;
@@ -41,4 +39,6 @@ export declare class TagInputAccessor implements ControlValueAccessor {
      * @param index
      */
     protected getItemsWithout(index: number): TagModel[];
+    static ɵfac: i0.ɵɵFactoryDeclaration<TagInputAccessor, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<TagInputAccessor, never, never, { "displayBy": "displayBy"; "identifyBy": "identifyBy"; }, {}, never>;
 }

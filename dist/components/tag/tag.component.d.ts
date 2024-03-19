@@ -1,7 +1,7 @@
 import { EventEmitter, TemplateRef, ElementRef, ChangeDetectorRef, Renderer2 } from '@angular/core';
-import { TagModel } from '../../core/accessor';
+import { TagModel } from '../../core/tag-model';
 import { TagRipple } from '../tag/tag-ripple.component';
-import { EventLike } from '../../core/helpers/event-like';
+import * as i0 from "@angular/core";
 export declare class TagComponent {
     element: ElementRef;
     renderer: Renderer2;
@@ -104,7 +104,7 @@ export declare class TagComponent {
      * @name keydown
      * @param event
      */
-    keydown(event: EventLike): void;
+    keydown(event: KeyboardEvent): void;
     /**
      * @name blink
      */
@@ -133,7 +133,7 @@ export declare class TagComponent {
      * @name disableEditMode
      * @param $event
      */
-    disableEditMode($event?: EventLike): void;
+    disableEditMode($event?: Event): void;
     /**
      * @name isDeleteIconVisible
      */
@@ -160,4 +160,6 @@ export declare class TagComponent {
      * @name getContentEditable
      */
     private getContentEditable;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TagComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TagComponent, "tag", never, { "model": "model"; "removable": "removable"; "editable": "editable"; "template": "template"; "displayBy": "displayBy"; "identifyBy": "identifyBy"; "index": "index"; "hasRipple": "hasRipple"; "disabled": "disabled"; "canAddTag": "canAddTag"; }, { "onSelect": "onSelect"; "onRemove": "onRemove"; "onBlur": "onBlur"; "onKeyDown": "onKeyDown"; "onTagEdited": "onTagEdited"; }, never, never>;
 }

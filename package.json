@@ -1,11 +1,11 @@
 {
   "name": "ngx-chips",
-  "version": "2.2.3",
+  "version": "3.0.0",
   "description": "Tag Input component for Angular",
   "scripts": {
     "release": "npm run build && npm publish dist",
     "postrelease": "rm -rf dist",
-    "build": "ng-packagr -p package.json && mkdirp ./dist/dist && ncp ./modules/core/styles ./dist/core/styles && ncp ./dist/bundles/ngx-chips.umd.js ./dist/dist/ngx-chips.bundle.js",
+    "build": "ng-packagr -p package.json && mkdirp ./dist/dist && ncp ./modules/core/styles ./dist/core/styles",
     "server": "ng serve --port 3010",
     "start": "npm run server",
     "test": "ng test modules --browsers=ChromeHeadless --watch=false",
@@ -18,38 +18,37 @@
   "contributors": [],
   "license": "MIT",
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1001.6",
-    "@angular/animations": "~10.1.5",
-    "@angular/cli": "~10.1.6",
-    "@angular/common": "~10.1.5",
-    "@angular/compiler": "~10.1.5",
-    "@angular/compiler-cli": "~10.1.5",
-    "@angular/core": "~10.1.5",
-    "@angular/forms": "~10.1.5",
-    "@angular/language-service": "~10.1.5",
-    "@angular/platform-browser": "^10.1.5",
-    "@angular/platform-browser-dynamic": "^10.1.5",
-    "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
+    "@angular-devkit/build-angular": "~13.3.9",
+    "@angular/animations": "~13.3.11",
+    "@angular/cli": "~13.3.11",
+    "@angular/common": "~13.3.11",
+    "@angular/compiler": "~13.3.11",
+    "@angular/compiler-cli": "~13.3.11",
+    "@angular/core": "~13.3.11",
+    "@angular/forms": "~13.3.11",
+    "@angular/language-service": "~13.3.11",
+    "@angular/platform-browser": "~13.3.11",
+    "@angular/platform-browser-dynamic": "~13.3.11",
+    "@types/jasmine": "^4.3.0",
+    "@types/jasminewd2": "^2.0.10",
+    "@types/node": "^14.14.21",
     "jasmine-core": "~3.4.0",
     "jasmine-spec-reporter": "~4.2.1",
-    "karma": "^5.1.1",
-    "karma-chrome-launcher": "~2.2.0",
+    "karma": "~6.4.1",
+    "karma-chrome-launcher": "^3.1.1",
     "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
+    "karma-jasmine": "^5.1.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "ng-packagr": "^10.0.3",
+    "ng-packagr": "^13.0.8",
     "protractor": "~7.0.0",
-    "rxjs": "~6.6.2",
+    "rxjs": "~6.6.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.5",
-    "zone.js": "~0.10.3"
+    "typescript": "~4.6.4",
+    "zone.js": "~0.11.4"
   },
   "dependencies": {
-    "ng2-material-dropdown": ">=0.11.0"
+    "ng2-material-dropdown": ">=1.0.0"
   },
   "peerDependencies": {
     "@angular/animations": ">=10.1.5",
@@ -79,7 +78,7 @@
     "lib": {
       "entryFile": "modules/index.ts"
     },
-    "whitelistedNonPeerDependencies": [
+    "allowedNonPeerDependencies": [
       "ng2-material-dropdown"
     ]
   },

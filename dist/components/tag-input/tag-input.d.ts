@@ -1,11 +1,13 @@
 import { EventEmitter, Renderer2, OnInit, TemplateRef, QueryList, AfterViewInit } from '@angular/core';
 import { AsyncValidatorFn, ValidatorFn } from '@angular/forms';
 import { Observable } from 'rxjs';
-import { TagInputAccessor, TagModel } from '../../core/accessor';
+import { TagInputAccessor } from '../../core/accessor';
+import { TagModel } from '../../core/tag-model';
 import { DragProvider } from '../../core/providers/drag-provider';
 import { TagInputForm } from '../tag-input-form/tag-input-form.component';
 import { TagComponent } from '../tag/tag.component';
 import { TagInputDropdown } from '../dropdown/tag-input-dropdown.component';
+import * as i0 from "@angular/core";
 export declare class TagInputComponent extends TagInputAccessor implements OnInit, AfterViewInit {
     private readonly renderer;
     readonly dragProvider: DragProvider;
@@ -393,10 +395,7 @@ export declare class TagInputComponent extends TagInputAccessor implements OnIni
      * @name updateEditedTag
      * @param tag
      */
-    updateEditedTag({ tag, index }: {
-        tag: TagModel;
-        index: number;
-    }): void;
+    updateEditedTag(tag: TagModel): void;
     /**
      *
      * @param tag
@@ -484,4 +483,6 @@ export declare class TagInputComponent extends TagInputAccessor implements OnIni
      * @name setAnimationMetadata
      */
     private setAnimationMetadata;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TagInputComponent, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TagInputComponent, "tag-input", never, { "separatorKeys": "separatorKeys"; "separatorKeyCodes": "separatorKeyCodes"; "placeholder": "placeholder"; "secondaryPlaceholder": "secondaryPlaceholder"; "maxItems": "maxItems"; "validators": "validators"; "asyncValidators": "asyncValidators"; "onlyFromAutocomplete": "onlyFromAutocomplete"; "errorMessages": "errorMessages"; "theme": "theme"; "onTextChangeDebounce": "onTextChangeDebounce"; "inputId": "inputId"; "inputClass": "inputClass"; "clearOnBlur": "clearOnBlur"; "hideForm": "hideForm"; "addOnBlur": "addOnBlur"; "addOnPaste": "addOnPaste"; "pasteSplitPattern": "pasteSplitPattern"; "blinkIfDupe": "blinkIfDupe"; "removable": "removable"; "editable": "editable"; "allowDupes": "allowDupes"; "modelAsStrings": "modelAsStrings"; "trimTags": "trimTags"; "inputText": "inputText"; "ripple": "ripple"; "tabindex": "tabindex"; "disable": "disable"; "dragZone": "dragZone"; "onRemoving": "onRemoving"; "onAdding": "onAdding"; "animationDuration": "animationDuration"; }, { "onAdd": "onAdd"; "onRemove": "onRemove"; "onSelect": "onSelect"; "onFocus": "onFocus"; "onBlur": "onBlur"; "onTextChange": "onTextChange"; "onPaste": "onPaste"; "onValidationError": "onValidationError"; "onTagEdited": "onTagEdited"; "inputTextChange": "inputTextChange"; }, ["dropdown", "templates"], ["*"]>;
 }

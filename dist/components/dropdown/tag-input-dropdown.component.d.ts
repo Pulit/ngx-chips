@@ -1,8 +1,9 @@
 import { EventEmitter, Injector, QueryList, TemplateRef, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Ng2Dropdown, Ng2MenuItem } from 'ng2-material-dropdown';
-import { TagModel } from '../../core/accessor';
 import { TagInputComponent } from '../tag-input/tag-input';
+import { TagModel } from '../../core/tag-model';
+import * as i0 from "@angular/core";
 export declare class TagInputDropdown implements AfterViewInit {
     private readonly injector;
     /**
@@ -115,7 +116,7 @@ export declare class TagInputDropdown implements AfterViewInit {
     /**
      * @name onItemClicked
      */
-    onItemClicked(): EventEmitter<string>;
+    onItemClicked(): EventEmitter<Ng2MenuItem>;
     /**
      * @name selectedItem
      */
@@ -187,4 +188,6 @@ export declare class TagInputDropdown implements AfterViewInit {
      * @param state
      */
     private setLoadingState;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TagInputDropdown, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TagInputDropdown, "tag-input-dropdown", never, { "offset": "offset"; "focusFirstElement": "focusFirstElement"; "showDropdownIfEmpty": "showDropdownIfEmpty"; "autocompleteObservable": "autocompleteObservable"; "minimumTextLength": "minimumTextLength"; "limitItemsTo": "limitItemsTo"; "displayBy": "displayBy"; "identifyBy": "identifyBy"; "matchingFn": "matchingFn"; "appendToBody": "appendToBody"; "keepOpen": "keepOpen"; "dynamicUpdate": "dynamicUpdate"; "zIndex": "zIndex"; "autocompleteItems": "autocompleteItems"; }, {}, ["templates"], never>;
 }

@@ -1,5 +1,6 @@
 import { EventEmitter, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { AsyncValidatorFn, FormControl, FormGroup, ValidatorFn } from '@angular/forms';
+import * as i0 from "@angular/core";
 export declare class TagInputForm implements OnInit, OnChanges {
     /**
      * @name onSubmit
@@ -125,4 +126,6 @@ export declare class TagInputForm implements OnInit, OnChanges {
      * @name submit
      */
     submit($event: any): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<TagInputForm, never>;
+    static ɵcmp: i0.ɵɵComponentDeclaration<TagInputForm, "tag-input-form", never, { "placeholder": "placeholder"; "validators": "validators"; "asyncValidators": "asyncValidators"; "inputId": "inputId"; "inputClass": "inputClass"; "tabindex": "tabindex"; "disabled": "disabled"; "inputText": "inputText"; }, { "onSubmit": "onSubmit"; "onBlur": "onBlur"; "onFocus": "onFocus"; "onKeyup": "onKeyup"; "onKeydown": "onKeydown"; "inputTextChange": "inputTextChange"; }, never, never>;
 }

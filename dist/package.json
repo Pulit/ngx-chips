@@ -1,6 +1,6 @@
 {
   "name": "ngx-chips",
-  "version": "2.2.3",
+  "version": "3.0.0",
   "description": "Tag Input component for Angular",
   "author": {
     "name": "Pulit"
@@ -8,8 +8,8 @@
   "contributors": [],
   "license": "MIT",
   "dependencies": {
-    "ng2-material-dropdown": ">=0.11.0",
-    "tslib": "^2.0.0"
+    "ng2-material-dropdown": ">=1.0.0",
+    "tslib": "^2.3.0"
   },
   "peerDependencies": {
     "@angular/animations": ">=10.1.5",
@@ -41,12 +41,24 @@
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   },
-  "main": "bundles/ngx-chips.umd.js",
-  "module": "fesm2015/ngx-chips.js",
-  "es2015": "fesm2015/ngx-chips.js",
-  "esm2015": "esm2015/ngx-chips.js",
-  "fesm2015": "fesm2015/ngx-chips.js",
+  "module": "fesm2015/ngx-chips.mjs",
+  "es2020": "fesm2020/ngx-chips.mjs",
+  "esm2020": "esm2020/ngx-chips.mjs",
+  "fesm2020": "fesm2020/ngx-chips.mjs",
+  "fesm2015": "fesm2015/ngx-chips.mjs",
   "typings": "ngx-chips.d.ts",
-  "metadata": "ngx-chips.metadata.json",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./ngx-chips.d.ts",
+      "esm2020": "./esm2020/ngx-chips.mjs",
+      "es2020": "./fesm2020/ngx-chips.mjs",
+      "es2015": "./fesm2015/ngx-chips.mjs",
+      "node": "./fesm2015/ngx-chips.mjs",
+      "default": "./fesm2020/ngx-chips.mjs"
+    }
+  },
   "sideEffects": false
 }

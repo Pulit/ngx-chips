@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 import { ValidatorFn, AsyncValidatorFn } from '@angular/forms';
-import { TagModel } from './core/accessor';
+import { TagModel } from './core/tag-model';
 export interface TagInputOptions {
     separatorKeys: string[];
     separatorKeyCodes: number[];

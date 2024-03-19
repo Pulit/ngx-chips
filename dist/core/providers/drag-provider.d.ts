@@ -1,5 +1,6 @@
 import { TagInputComponent } from '../../components/tag-input/tag-input';
-import { TagModel } from '../accessor';
+import { TagModel } from '../tag-model';
+import * as i0 from "@angular/core";
 export declare interface DraggedTag {
     index: number;
     tag: TagModel;
@@ -59,4 +60,6 @@ export declare class DragProvider {
      * @name onDragEnd
      */
     onDragEnd(): void;
+    static ɵfac: i0.ɵɵFactoryDeclaration<DragProvider, never>;
+    static ɵprov: i0.ɵɵInjectableDeclaration<DragProvider>;
 }
